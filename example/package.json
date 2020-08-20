@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "local-web-server": "^4.2.1",
     "browserify": "^16.5.2",
+    "local-web-server": "^4.2.1",
     "watchify": "^3.11.1"
   }
 }
