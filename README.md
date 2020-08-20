@@ -1,0 +1,107 @@
+minthril
+========
+
+## What is Minthril?
+
+A modern client-side Javascript library for building web user interfaces. It's small, fast and minimal.
+
+Minthril is based on the rendering section from an amazing library called [mithril.js](https://github.com/MithrilJS/mithril.js). Out of the box, the original library offers a lot of features, and this project attempts to strip down those features to the core dom diffing functionality.
+
+## Installation
+### npm
+
+```bash
+npm install minthril --save
+```
+
+### Simple Example
+```javascript
+const minthril = require('minthril');
+const m = minthril;
+
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.body
+
+  const ui = m('div',
+    m('h1', 'Testing'),
+    m('p', 'This is a test.')
+  )
+
+  mithril.render(container, ui);
+
+  setTimeout(function () {
+    const updatedUi = m('div',
+      m('h1', 'Testing'),
+      m('p', 'This line has changed changed.')
+    )
+
+    mithril.render(container, updatedUi);
+  }, 500);
+});
+```
+
+### Creating stateful components
+```javascript
+function infobox (options) {
+  return minthril.createComponent(function (state, draw) {
+    function handleClick () {
+      state.expanded = !state.expanded;
+      draw();
+    }
+
+    return html`
+      <div>
+        <button onclick=${handleClick}>Toggle</button>
+        <div ${state.expanded ? '' : 'hidden'}>
+          ${state.message}
+        </div>
+      </div>
+    `;
+  }, { message: options.message });
+};
+
+const ui = m('div',
+  m('h1', 'Testing'),
+  infoBox({message: 'my test message'})
+);
+```
+
+### Example with Hyperx
+```javascript
+const mithril = require('minthril');
+const html = require('hyperx')(mithril);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.body
+
+  const ui = html`
+    <div>
+      <h1>Testing</h1>
+      <p>This is a test.</p>
+    </div>
+  `;
+
+  mithril.render(container, ui);
+
+  setTimeout(function () {
+    const updatedUi = html`
+      <div>
+        <h1>Testing</h1>
+        <p>This line has changed changed.</p>
+      </div>
+    `;
+
+    mithril.render(container, updatedUi);
+  }, 500);
+});
+```
+
+A great place to start is the [example](./example) folder that's included with this project.
+
+For a full example checkout the minthril example repo:
+
+https://github.com/markwylde/minthril-demo
+
+## Documentation
+
+You may be interested in the [API Docs](./docs/render.md).

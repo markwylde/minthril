@@ -1,0 +1,19 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "Basic Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify -d -o index.min.js index.js & ws",
+    "build": "browserify -d -o index.min.js index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "local-web-server": "^4.2.1",
+    "browserify": "^16.5.2",
+    "watchify": "^3.11.1"
+  }
+}

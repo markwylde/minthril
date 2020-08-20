@@ -1,0 +1,39 @@
+{
+  "name": "minthril",
+  "version": "2.1.1",
+  "description": "A framework for building brilliant applications",
+  "contributors": [
+    "Leo Horie",
+    "Mark Wylde"
+  ],
+  "license": "MIT",
+  "unpkg": "minthril.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markwylde/minthril.git"
+  },
+  "scripts": {
+    "test": "ospec"
+  },
+  "devDependencies": {
+    "hyperx": "^2.5.4",
+    "ospec": "^4.1.1",
+    "semistandard": "^14.2.3"
+  },
+  "bugs": {
+    "url": "https://github.com/markwylde/minthril/issues"
+  },
+  "homepage": "https://github.com/markwylde/minthril#readme",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "example",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {
+    "browserify": "^16.5.2"
+  },
+  "keywords": [],
+  "author": ""
+}
