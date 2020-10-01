@@ -42,22 +42,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ### Creating stateful components
 ```javascript
-function infobox (options) {
-  return minthril.createComponent(function (state, draw) {
-    function handleClick () {
-      state.expanded = !state.expanded;
-      draw();
-    }
+function infoBox (options) {
+  const state = {
+    message: options.message
+  }
 
-    return html`
-      <div>
-        <button onclick=${handleClick}>Toggle</button>
-        <div ${state.expanded ? '' : 'hidden'}>
-          ${state.message}
+  function handleClick () {
+    state.expanded = !state.expanded;
+    redraw();
+  }
+
+  return {
+    view: () => {
+      return html`
+        <div>
+          <button onclick=${handleClick}>Toggle</button>
+          <div ${state.expanded ? '' : 'hidden'}>
+            ${state.message}
+          </div>
         </div>
-      </div>
-    `;
-  }, { message: options.message });
+      `;
+    }
+  }
 };
 
 const ui = m('div',
