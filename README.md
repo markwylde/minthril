@@ -68,7 +68,7 @@ function infoBox (options) {
 
 const ui = m('div',
   m('h1', 'Testing'),
-  infoBox({message: 'my test message'})
+  m(infoBox, {message: 'my test message'})
 );
 ```
 
