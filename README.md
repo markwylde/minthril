@@ -49,7 +49,7 @@ function infoBox (options) {
 
   function handleClick () {
     state.expanded = !state.expanded;
-    redraw();
+    mithril.redraw(); // or your app.emitStateChanged();
   }
 
   return {
@@ -74,8 +74,8 @@ const ui = m('div',
 
 ### Example with Hyperx
 ```javascript
-const mithril = require('minthril');
-const html = require('hyperx')(mithril);
+const minthril = require('minthril');
+const html = require('hyperx')(minthril);
 
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.body
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     `;
 
-    mithril.render(container, updatedUi);
+    minthril.render(container, updatedUi);
   }, 500);
 });
 ```
