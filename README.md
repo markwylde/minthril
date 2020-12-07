@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     m('p', 'This is a test.')
   )
 
-  mithril.render(container, ui);
+  minthril.render(container, ui);
 
   setTimeout(function () {
     const updatedUi = m('div',
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       m('p', 'This line has changed changed.')
     )
 
-    mithril.render(container, updatedUi);
+    minthril.render(container, updatedUi);
   }, 500);
 });
 ```
@@ -49,7 +49,7 @@ function infoBox (options) {
 
   function handleClick () {
     state.expanded = !state.expanded;
-    mithril.redraw(); // or your app.emitStateChanged();
+    minthril.redraw(); // or your app.emitStateChanged();
   }
 
   return {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   `;
 
-  mithril.render(container, ui);
+  minthril.render(container, ui);
 
   setTimeout(function () {
     const updatedUi = html`
