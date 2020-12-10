@@ -10,9 +10,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "browserify": "^16.5.2",
+    "browserify": "^17.0.0"
+  },
+  "dependencies": {
+    "hyperx": "^2.5.4",
     "local-web-server": "^4.2.1",
     "watchify": "^3.11.1"
   }
