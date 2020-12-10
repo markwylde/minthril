@@ -16,9 +16,7 @@
     "test": "ospec"
   },
   "devDependencies": {
-    "hyperx": "^2.5.4",
-    "ospec": "^4.1.1",
-    "semistandard": "^14.2.3"
+    "ospec": "^4.1.1"
   },
   "bugs": {
     "url": "https://github.com/markwylde/minthril/issues"
@@ -30,9 +28,6 @@
     "example": "example",
     "lib": "lib",
     "test": "tests"
-  },
-  "dependencies": {
-    "browserify": "^16.5.2"
   },
   "keywords": [],
   "author": ""
