@@ -6,6 +6,7 @@ function minthril () {
 
 minthril.m = require('./lib/hyperscript');
 minthril.render = require('./lib/render')(window);
+minthril.createRender = require('./lib/render');
 minthril.vnode = require('./lib/vnode');
 minthril.fragment = require('./lib/fragment');
 
