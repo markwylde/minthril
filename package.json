@@ -13,10 +13,13 @@
     "url": "git+https://github.com/markwylde/minthril.git"
   },
   "scripts": {
+    "build": "browserify --noparse clone -t uglifyify -o minthril.min.js index.js",
     "test": "ospec"
   },
   "devDependencies": {
-    "ospec": "^4.1.1"
+    "browserify": "^17.0.0",
+    "ospec": "^4.1.1",
+    "uglifyify": "^5.0.2"
   },
   "bugs": {
     "url": "https://github.com/markwylde/minthril/issues"
@@ -30,5 +33,6 @@
     "test": "tests"
   },
   "keywords": [],
-  "author": ""
+  "author": "",
+  "dependencies": {}
 }
