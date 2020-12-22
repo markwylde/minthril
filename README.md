@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   minthril.render(container, ui);
 
+  // setTimeout is just for the demo. Your app would
+  // take control of when to redraw your app when
+  // your state changes.
   setTimeout(function () {
     const updatedUi = m('div',
       m('h1', 'Testing'),
