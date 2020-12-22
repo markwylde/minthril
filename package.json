@@ -13,7 +13,7 @@
     "url": "git+https://github.com/markwylde/minthril.git"
   },
   "scripts": {
-    "build": "browserify --noparse clone -t uglifyify -o minthril.min.js index.js",
+    "build": "browserify --standalone m --noparse clone -t uglifyify -o minthril.min.js index.js",
     "test": "ospec"
   },
   "devDependencies": {
