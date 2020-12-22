@@ -1,9 +1,9 @@
 <body>
-  <!-- <script src="https://unpkg.com/minthril"></script> -->
-  <script src="./minthril.min.js"></script>
+  <script src="https://unpkg.com/minthril"></script>
+  <!-- <script src="./minthril.min.js"></script> -->
   <script>
     var root = document.body
-    var count = 0 // added a variable
+    var count = 0
     var Hello = {
       view: function() {
         return m("main", [
@@ -11,12 +11,18 @@
             class: "title"
           }, "My first app"),
           m("button", {
-            onclick: function() {count++}
+            onclick: function() {
+              count++
+              render()
+            }
           }, count + " clicks")
         ])
       }
     }
 
-    m.render(root, m(Hello))
+    function render () {
+      m.render(root, m(Hello))
+    }
+    render()
   </script>
 </body>
